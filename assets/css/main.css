@@ -154,6 +154,10 @@ box-shadow:  50px 50px 100px #fcfcfc,
   flex-direction: column-reverse;
 }
 
+.laps .lap-list .fas {
+  margin-right: 10px;
+}
+
 .laps .lap-count {
   margin-right: 20px;
 }
