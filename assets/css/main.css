@@ -129,7 +129,7 @@ box-shadow:  50px 50px 100px #fcfcfc,
   transform: translateY(100%);
   transition: .5s all ease;
   opacity: 0;
-  overflow-y: scroll;
+  overflow-y: auto;
   z-index: 1;
 }
 
