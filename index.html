@@ -1,0 +1,50 @@
+<!-- Copyright 2021 by Mohamad Adithya -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color" content="#FFFFFF"/>
+  <title>Chronómetro</title>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/animate.min.css">
+  <link rel="manifest" href="assets/js/web.webmanifest">
+  <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+  <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <div class="container">
+    <div class="stopwatch">
+      <div class="logo">
+        <p class="text">Chronómetro</p>
+        <small class="author">by Mohamad Adithya</small>
+      </div>
+      <ul class="timers">
+        <li class="timer-display" id="hours">00</li>
+        <li class="timer-display" id="mins">00</li>
+        <li class="timer-display" id="sec">00</li>
+        <li class="timer-display" id="milisec">00</li>
+      </ul>
+      <div class="buttons">
+        <button class="btn start"><i class="fas fa-play fa-fw"></i></button>
+        <button class="btn stop"><i class="fas fa-pause fa-fw"></i></button>
+        <button class="btn reset"><i class="fas fa-undo fa-fw"></i></button>
+        <button class="btn lap"><i class="fas fa-flag-checkered fa-fw"></i></button>
+      </div>
+    </div>
+    <button class="btn lap-notif animate__animated animate__pulse animate__infinite fas fa-flag-checkered"></i>
+    </button>
+  </div>
+  <div class="laps">
+    <div class="container">
+      <h1 class="title">Laps</h1>
+      <ul></ul>
+    </div>
+  </div>
+  <script src="/assets/js/register.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/assets/js/app.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+<!-- Copyright 2021 by Mohamad Adithya -->
