@@ -131,6 +131,7 @@ box-shadow:  50px 50px 100px #fcfcfc,
   opacity: 0;
   overflow-y: auto;
   z-index: 1;
+  font-family: var(--robotoFont);
 }
 
 .laps.active {
@@ -149,8 +150,17 @@ box-shadow:  50px 50px 100px #fcfcfc,
   font-family: 'Poppins-SemiBold', sans-serif;
 }
 
+.laps .lap-list {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.laps .lap-count {
+  margin-right: 20px;
+}
+
 .laps .lap-time {
   font-size: 1.3rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 /* Copyright 2021 by Mohamad Adithya */
