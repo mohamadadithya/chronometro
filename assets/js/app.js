@@ -8,7 +8,7 @@ const btnLapNotif = document.querySelector('.lap-notif')
 const btnLapNotifClose = document.querySelector('.lap-notif.close')
 
 const laps = document.querySelector('.laps')
-const lapLists = laps.querySelector('ul')
+const lapLists = laps.querySelector('.lap-list')
 
 let hours = 0
 let minutes = 0
@@ -30,6 +30,7 @@ let interval = null
 let status = 'stopped'
 
 let lapNow = null
+let lapCount = 1
 
 const start = () => {
   miliseconds++
@@ -115,12 +116,13 @@ btnReset.onclick = () => {
   timerHours.innerText = displayHours
   
   lapLists.innerHTML = ''
+  lapCount = 1
   btnLapNotif.style.display = 'none'
 }
 
 btnLap.onclick = () => {
  lapNow = `${displayHours}:${displayMinutes}:${displaySeconds}:${displayMiliseconds}`
-  lapLists.innerHTML += `<li class="lap-time">${lapNow}</li>`
+  lapLists.innerHTML += `<li class="lap-time"><i class="fas fa-flag-checkered"></i> <strong class="lap-count">${lapCount++}</strong> ${lapNow}</li>`
   btnLapNotif.style.display = 'block'
 }
 
