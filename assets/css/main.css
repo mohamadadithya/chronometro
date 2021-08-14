@@ -1,0 +1,156 @@
+/* Copyright 2021 by Mohamad Adithya */
+@font-face {
+	font-family: 'Poppins-Light';
+	src: url('../fonts/Poppins-Light.ttf');
+	src: url('../fonts/Poppins-Light.ttf') format('ttf'),
+	     url('../fonts/Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Poppins-SemiBold';
+	src: url('../fonts/Poppins-SemiBold.ttf');
+	src: url('../fonts/Poppins-SemiBold.ttf') format('ttf'),
+	     url('../fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+:root {
+  font-family: 'Poppins-Light', sans-serif;
+  font-size: 14px;
+  
+ --robotoFont: 'Roboto', sans-serif;
+ scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  list-style: none;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0 18px;
+}
+
+.stopwatch {
+  width: 100%;
+}
+
+.stopwatch .timers {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+  text-align: center;
+}
+
+.stopwatch .timers .timer-display {
+  flex-grow: 1;
+  font-size: 3rem;
+  font-family: var(--robotoFont);
+}
+
+.stopwatch .logo {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Poppins-Light', sans-serif;
+}
+
+.stopwatch .logo .text {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.stopwatch .logo .author  {
+  font-size: .7rem;
+  color: gray;
+}
+
+.stopwatch .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 12px;
+  margin-top: 40px;
+}
+
+.btn {
+  padding: 18px;
+background: linear-gradient(145deg, #ffffff, #e6e6e6);
+box-shadow:  50px 50px 100px #fcfcfc,
+             -50px -50px 100px #ffffff;
+  color: black;
+  border-radius: 8px;
+  transition: .3s;
+  border-radius: 50%;
+  display: none;
+  font-size: 1.3rem;
+  font-family: var(--robotoFont);
+}
+
+.btn:active {
+  transform: scale(.92);
+}
+
+.buttons .btn:first-child {
+  display: unset;
+}
+
+.buttons .btn.show {
+  display: unset;
+}
+
+.buttons .btn.hide {
+  display: none;
+}
+
+.btn.lap-notif {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  z-index: 2;
+}
+
+.laps {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  background-color: white;
+  width: 100%;
+  transform: translateY(100%);
+  transition: .5s all ease;
+  opacity: 0;
+  overflow-y: scroll;
+  z-index: 1;
+}
+
+.laps.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.laps .container {
+  display: block;
+  margin: 18px;
+}
+
+.laps .title {
+  font-size: 2.5rem;
+  margin-bottom: 1.3rem;
+  font-family: 'Poppins-SemiBold', sans-serif;
+}
+
+.laps .lap-time {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+/* Copyright 2021 by Mohamad Adithya */
